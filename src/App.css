@@ -27,7 +27,7 @@ body {
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
   /* gap: 10px; */
@@ -72,7 +72,8 @@ button {
 }
 
 .btn:active {
-  background-color: var(--btn-hover-color);
+  box-shadow: inset 2px 2px 3px 0px rgba(0, 0, 0, 0.645),
+    inset -2px -2px 2px 0px rgba(0, 0, 0, 0.595);
 }
 
 .dice-group {
@@ -89,11 +90,17 @@ button {
   padding: 15px;
   text-align: center;
   background-color: var(--die-color);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.658);
+  font-weight: 800;
   cursor: pointer;
+}
+
+.die[data-is-held="true"] {
+  background-color: var(--die-select-color);
 }
 
 .die:hover {
   background-color: var(--btn-hover-color);
+  color: #fff;
 }
